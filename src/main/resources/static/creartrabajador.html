@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+  		<meta charset="UTF-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  		<title>Crear Trabajador</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="estilos/estilos.css">
+	</head>
+	
+	<body>
+		<header>
+			<div class="logo">
+				<img src="img/skillstack - 001721.gif"></img>
+			</div>
+			<div class="toggle"></div>
+		</header>
+  		<div id="app" class="showcase">
+    		<h1>Crear Trabajador</h1>
+    		<form @submit.prevent="guardarTrabajador">
+      			<div class="form-group">
+        			<label for="nombre">Nombre:</label>
+        			<input type="text" class="form-control" id="nombre" v-model="nuevoTrabajador.nombre" required>
+      			</div>
+      			<div class="form-group">
+        			<label for="apellido">Apellido:</label>
+        			<input type="text" class="form-control" id="apellido" v-model="nuevoTrabajador.apellido" required>
+      			</div>
+      			<div class="form-group">
+        			<label for="cargo">Cargo:</label>
+        			<input type="text" class="form-control" id="cargo" v-model="nuevoTrabajador.cargo" required>
+      			</div>
+      			<button type="submit" class="btn btn-primary">Guardar</button>
+    		</form>
+  		</div>
+  		
+  		<div class="menu">
+            <ul>
+                <li><a href="#"><strong>SkillStack Platform</strong></a></li>
+                <li><a href="#">Cursos</a></li>
+                <li><a href="#">Profesores</a></li>
+                <li><a href="#">Alumnos</a></li>
+                <li><a href="#">Administrativos</a></li>
+                <li><a href="#">Histotorial académico</a></li>
+                <li><a href="trabajadores.html">Recursos Humanos</a></li>
+                <li><a href="#">Herramientas</a></li>
+            </ul> 
+        </div>
+
+		<!-- SweetAlert 2 CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">
+
+		<!-- Axios y Vue.js CDN -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+
+		<!-- SweetAlert 2 JS -->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.all.min.js"></script>
+
+		<!-- Body Bootstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+		
+		<!-- Archivo de script personalizado -->
+		<script src="creartrabajador.js"></script>
+
+	</body>
+</html>
